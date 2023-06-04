@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alistamento brasil</title>
+</head>
+<body>
+    <h1>Exercito brasileiro</h1>
+    idade : <input type="number" id="i"> anos
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular () {
+            var rec = window.document.querySelector('input#i')
+            var res = window.document.querySelector('div#res')
+            var idad = Number(rec.value)
+            res.innerHTML = `<p>voce tem ${idad} anos</p>`
+            if (idad <= 18) {
+                res.innerHTML += ` <p>voce precisa se alistar</p> `
+            }
+        }
+    </script>
+</body>
+</html>

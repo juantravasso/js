@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+    <style>
+        body {
+            font: normal 10pt arial;
+            background-color: green;
+            color: white;
+        }
+        h1 {
+            background-color: rgb(204, 4, 4);
+            color: white;
+            padding: 10px 0px 10px 10px;
+        }
+
+        div {
+            background-color: rgb(2, 65, 2);
+            padding: 20px;
+            text-align: center;
+            font: normal 18pt Arial;
+            width: 200px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>FLUMINENSE</p>
+
+    <div id="area">
+        interaja...
+    </div>
+    
+    <script>
+        var n1 = Number(window.prompt('digite um numero:'))
+        var n2 = Number(window.prompt('digite outro numero:'))
+        var s = n1 + n2 
+        window.alert ('resultado é ' + s)
+
+        var a = document.getElementById ('area')
+        a.addEventListener ('click', clicar)
+        a.addEventListener ('mouseenter', entrar)
+        a.addEventListener ('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'clicou'
+            a.style.backgroundColor = 'red'
+        }
+
+        function entrar () {
+            a.innerText = 'entrou'
+        }
+
+        function sair () {
+            a.innerText = 'saiu'
+            a.style.backgroundColor = 'rgb(2, 65, 2)'
+        }
+
+    </script>
+</body>
+</html>

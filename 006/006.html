@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALISTAMENTO</title>
+</head>
+<body>
+    <H1>ALISTAMENTO</H1>
+    qual sua nacionaliade? <input type="text"id="perg">
+    <input type="button" value = "verificar" onclick="confirmar()">
+    <div id ="res">
+
+    </div>
+    <script>
+        function confirmar(){
+            var pais = document.querySelector ('input#perg')
+            var res = document.querySelector ('div#res')
+            var nac = pais.value;
+            res.innerHTML = `<p>voce é ${nac}</p>`
+            if (nac == "Brasileiro"|| nac == "brasileiro") {
+                res.innerHTML += `<p>voce é do Brasil</p>`;
+            }
+            else {
+                res.innerHTML += `<p>voce é estrangeiro</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

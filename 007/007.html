@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleições</title>
+</head>
+<body>
+    <h1>voce tem que votar nessa eleção?</h1>
+    qual sua idade? <input type="text"id="perg"> 
+    <input type="button" value="verificar" onclick="confirmar()">
+    <div id = "res" >
+
+    </div>
+
+    <script>
+        var idad = document.querySelector ('input#perg')
+        var res = document.querySelector ('div#res')
+        var anos = Number (idade.value);
+        res.innerHTML = `<p>voce tem ${anos}</p>`
+        if (anos < 16) {
+            res.innerHTML += 'nao vota'
+        }
+        else if (anos < 18 || anos > 65) {
+            res.innerHTML += 'voto opcional'
+        }
+        else {
+            res.innerHTML += 'voto obrigatorio'
+        }
+    </script>
+
+
+</body>
+</html>
